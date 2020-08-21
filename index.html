@@ -8,9 +8,61 @@
   <title>Checkpoint 2 - Game</title>
 </head>
 
-<body>
+<body class="ocean-background">
+  <header>
+    <div>
+      <div class="container-fluid justify-content-center">
+        <div class="row justify-content-center">
+          <div class="col-12 bg-secondary text-center">Fishing With Dynamite</div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="container-fluid ocean-background">
+    <div class="row">
+      <div class="col-4 card stats-card p-2 text-center w-50 justify-content-center mt-5 bg-secondary text-light">
+        <h1> Stats </h1>
+        <h5>Hits Per Second:</h5>
+        <h5>Modifiers:</h5>
+      </div>
+      <div class="col-4 card fish-card p-2 text-center w-50 justify-content-center mt-5 text-light">
+        Fish Sticks
+      </div>
+      <div class="col-4 card inventory-card p-2 text-center w-50 justify-content-center mt-5 bg-secondary text-light">
+        <h1>Inventory
+        </h1>
+        <h5>Spears:</h5>
+        <h5>Nets:</h5>
+        <h5>Machine Guns:</h5>
+        <h5>Nukes:</h5>
 
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center text-light "> <button onclick="cast()">Cast</button>
+        <h1 id="total-fish"> </h1>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div>
+      <div class="container">
+        <div class="row">
+          <div
+            class="col card store-card p-2 text-center w-50 justify-content-center align-items-center mt-5 bg-secondary text-light">
+            <h1> Store</h1>
+            <button onclick="equipWeapon(12)">Buy Spear: $10</button>
+            <button>Buy Large Net: $100</button>
+            <button>Buy Machine Gun: $1000</button>
+            <button>Buy Nuke: $10,000</button>
 
+          </div>
+        </div>
+        <div class="row"></div>
+        <div class="col bg-secondary text-center">Made with love by spencer</div>
+      </div>
+    </div>
+  </footer>
   <script src="app.js"></script>
 </body>
 

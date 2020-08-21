@@ -8,3 +8,31 @@ main{
   flex-grow: 1;
 
 } 
+
+.ocean-background{
+  background-image:  url(ocean-background.jpg) ;
+  background-size: cover;
+  background-position: center;
+}
+
+.stats-card{
+  height: 25vh;
+}
+
+.fish-card{
+  height: 25vh;
+  background-image: url(fishing.jpg);
+  background-position: center;
+    background-size: cover;
+    background-position-y:  ;
+}
+
+.inventory-card{
+  height: 25vh;
+}
+
+.store-card{
+  height: 25vh;
+  max-width: 50vh;
+}
+
