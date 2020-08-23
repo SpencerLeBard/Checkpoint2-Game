@@ -36,3 +36,7 @@ main{
   max-width: 50vh;
 }
 
+#cast-button{
+  background-color: black;
+  color: antiquewhite;
+}
