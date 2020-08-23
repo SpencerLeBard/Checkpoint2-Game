@@ -77,6 +77,10 @@ function equipWeapon(name) {
     drawDamage()
     drawSpearPrice()
     drawSpearsInventory()
+    drawNetPrice()
+    drawGunPrice()
+    drawNukePrice()
+
   }
 }
 
@@ -89,6 +93,7 @@ function equipAutoWeapon(name) {
   if (fisher.fish >= item.cost) {
     fisher.fish++
     fisher.fish -= item.cost
+    automaticUpgrades.nuke.cost += 10
     //??
     //??
 
@@ -106,6 +111,7 @@ function equipAutoWeapon(name) {
     drawDamage()
     drawSpearsInventory()
     drawSpearPrice()
+    drawNukePrice()
   }
   increaseInterval()
 }
