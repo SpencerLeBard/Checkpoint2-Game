@@ -39,4 +39,6 @@ main{
 #cast-button{
   background-color: black;
   color: antiquewhite;
+  height: 25vh;
+  width: 5vh;
 }

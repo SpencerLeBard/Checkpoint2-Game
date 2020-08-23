@@ -75,6 +75,8 @@ function equipWeapon(name) {
 
     }
     drawDamage()
+    drawSpearPrice()
+    drawSpearsInventory()
   }
 }
 
@@ -192,4 +194,6 @@ function drawNukeInventory() {
 }
 drawNukeInventory()
 
+function drawEverything() {
 
+}
