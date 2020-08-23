@@ -34,6 +34,7 @@ main{
 .store-card{
   height: 25vh;
   max-width: 50vh;
+  transform: translateX(70%);
 }
 
 #cast-button{

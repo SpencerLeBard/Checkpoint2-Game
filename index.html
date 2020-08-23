@@ -13,7 +13,7 @@
     <div>
       <div class="container-fluid justify-content-center">
         <div class="row justify-content-center">
-          <div class="col-12 bg-secondary text-center">Fishing With Dynamite</div>
+          <div class="col bg-secondary text-center text-light">Fishing With Dynamite</div>
         </div>
       </div>
     </div>
@@ -33,7 +33,7 @@
         <h5>Spears: <span id="spear-inventory"></span> * 2 Multipler </h5>
         <h5>Nets: <span id="net-inventory"></span> * 5 Multipler </h5>
         <h5>Machine Guns: <span id="gun-inventory"></span> * 10 Multipler </h5>
-        <h5>Nukes: <span id="nuke-inventory"></span> * 25 Multipler </h5>
+        <h5>Nukes: <span id="nuke-inventory"></span> + 1 per second </h5>
 
       </div>
     </div>
@@ -55,11 +55,10 @@
             <button onclick="equipWeapon('net')">Buy Large Net: $<span id="net-price"></span></button>
             <button onclick="equipWeapon('machineGun')">Buy Machine Gun: $<span id="gun-price"></span></button>
             <button onclick="equipAutoWeapon('nuke')">Buy Nuke: $<span id="nuke-price"></span></button>
-
           </div>
         </div>
         <div class="row"></div>
-        <div class="col bg-secondary text-center">Made with love by Spencer</div>
+        <div class="col bg-secondary text-center text-light">Made with love by Spencer</div>
       </div>
     </div>
   </footer>
