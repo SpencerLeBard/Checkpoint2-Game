@@ -43,7 +43,7 @@ let automaticUpgrades = {
 
 
 let fisher = {
-  fish: 10000,
+  fish: 1,
   spear: 0,
   net: 0,
   machineGun: 0,
@@ -69,6 +69,7 @@ function equipWeapon(name) {
     fisher[name]++
     fisher.fish -= item.cost
     item.cost += 10
+    fisher.spear += 1
     if (item.name == "spear") {
       //NOTE MODIFIER Here??
 
@@ -87,15 +88,24 @@ function equipAutoWeapon(name) {
     fisher.fish++
     fisher.fish -= item.cost
     //??
-    fisher.spear += 1
     //??
 
+    let nuke;
+    function increaseInterval() {
+      nuke = setInterval(autoNuke, 3000);
+      setInterval(drawDamage, 3000)
+    }
 
+    function autoNuke() {
+
+      fisher.fish++
+      drawDamage()
+    }
     drawDamage()
     drawSpearsInventory()
     drawSpearPrice()
   }
-
+  increaseInterval()
 }
 
 function drawDamage() {
@@ -181,4 +191,5 @@ function drawNukeInventory() {
 
 }
 drawNukeInventory()
+
 
