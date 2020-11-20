@@ -1,43 +1,40 @@
-body{ 
-  min-height: 100vh; 
-  display: flex; 
-  flex-direction: column; 
-
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-main{
+main {
   flex-grow: 1;
+}
 
-} 
-
-.ocean-background{
-  background-image:  url(ocean-background.jpg) ;
+.ocean-background {
+  background-image: url(ocean-background.jpg);
   background-size: cover;
   background-position: center;
 }
 
-.stats-card{
+.stats-card {
   height: 25vh;
 }
 
-.fish-card{
+.fish-card {
   height: 25vh;
   background-image: url(fishing.jpg);
   background-position: center;
-    background-size: cover;
-    background-position-y:  ;
+  background-size: cover;
 }
 
-.inventory-card{
+.inventory-card {
   height: 25vh;
 }
 
-.store-card{
+.store-card {
   height: 25vh;
   max-width: 50vh;
   transform: translateX(70%);
 }
 
-#cast-button{
+#cast-button {
   background-color: black;
   color: antiquewhite;
   height: 25vh;

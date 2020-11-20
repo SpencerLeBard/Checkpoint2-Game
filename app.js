@@ -141,7 +141,8 @@ drawNukePrice()
 
 
 
-// inventory
+// NOTE <-----inventory------>
+
 function drawInventory() {
   drawSpearsInventory()
   drawGunInventory()
