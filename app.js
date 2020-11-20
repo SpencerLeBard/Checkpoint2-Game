@@ -3,10 +3,10 @@ let spearPrice = document.getElementById('spear-price')
 let netPrice = document.getElementById('net-price')
 let gunPrice = document.getElementById('gun-price')
 let nukePrice = document.getElementById('nuke-price')
-let DrawSpearInventory = document.getElementById('spear-inventory')
-let DrawNetInventory = document.getElementById('net-inventory')
-let DrawGunInventory = document.getElementById('gun-inventory')
-let DrawNukeInventory = document.getElementById('nuke-inventory')
+let spearInventory = document.getElementById('spear-inventory')
+let netInventory = document.getElementById('net-inventory')
+let gunInventory = document.getElementById('gun-inventory')
+let nukeInventory = document.getElementById('nuke-inventory')
 
 
 let clickUpgrades = {
@@ -48,7 +48,6 @@ let fisher = {
   net: 0,
   machineGun: 0,
   nuke: 0
-
 }
 
 function cast() {
@@ -64,23 +63,12 @@ function equipWeapon(name) {
 
   let item = clickUpgrades[name]
 
-
   if (fisher.fish >= item.cost) {
     fisher[name]++
     fisher.fish -= item.cost
     item.cost += 10
-    fisher.spear += 1
-    if (item.name == "spear") {
-      //NOTE MODIFIER Here??
-
-    }
     drawDamage()
-    drawSpearPrice()
-    drawSpearsInventory()
-    drawNetPrice()
-    drawGunPrice()
-    drawNukePrice()
-
+    drawInventory()
   }
 }
 
@@ -94,9 +82,6 @@ function equipAutoWeapon(name) {
     fisher.fish++
     fisher.fish -= item.cost
     automaticUpgrades.nuke.cost += 10
-    //??
-    //??
-
     let nuke;
     function increaseInterval() {
       nuke = setInterval(autoNuke, 3000);
@@ -109,9 +94,7 @@ function equipAutoWeapon(name) {
       drawDamage()
     }
     drawDamage()
-    drawSpearsInventory()
-    drawSpearPrice()
-    drawNukePrice()
+    drawInventory()
   }
   increaseInterval()
 }
@@ -122,10 +105,6 @@ function drawDamage() {
 }
 drawDamage()
 
-// function autocast interval 0 , when buy increase interval 
-//xxxxxxxxxxxxxxxx NOTE Drawing
-
-// price
 
 function drawSpearPrice() {
   let template = `${clickUpgrades.spear.cost}`
@@ -163,43 +142,37 @@ drawNukePrice()
 
 
 // inventory
-
+function drawInventory() {
+  drawSpearsInventory()
+  drawGunInventory()
+  drawNetInventory()
+  drawNukeInventory()
+}
 
 
 function drawSpearsInventory() {
   let template = `${fisher.spear}`
-  DrawSpearInventory.innerText = template
-
-
+  spearInventory.innerText = template
 }
 drawSpearsInventory()
 
 function drawNetInventory() {
   let template = `${fisher.net}`
-  DrawNetInventory.innerText = template
-
-
+  netInventory.innerText = template
 }
+
 drawNetInventory()
 
 
 function drawGunInventory() {
   let template = `${fisher.machineGun}`
-  DrawGunInventory.innerText = template
-
-
+  gunInventory.innerText = template
 }
 drawGunInventory()
 
 
 function drawNukeInventory() {
   let template = `${fisher.nuke}`
-  DrawNukeInventory.innerText = template
-
-
+  nukeInventory.innerText = template
 }
 drawNukeInventory()
-
-function drawEverything() {
-
-}
